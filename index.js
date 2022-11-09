@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/' , (req,res) => {
-    res.send('foodex-cloud-kitchen is runningdd')
+    res.send('foodex-cloud-kitchen is running')
 })
 
 app.listen(port , () =>{
