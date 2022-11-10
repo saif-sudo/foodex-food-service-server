@@ -54,10 +54,18 @@ async function run(){
        const query = {_id: ObjectId(id)};
        const service = await serviceCollection.findOne(query);
        res.send(service);
+
+      
        
-})
+});
 
+app.post('/services', async (req,res) =>{
+    const service = req.body;
+    
+    const result = await serviceCollection.insertOne(service);
+    res.send(result);
 
+});
 
        /* const user = {name: 'Mehedi Ali' , email:'mehedi@gmail.com'};
         const result = await userCollection.insertOne(user);
